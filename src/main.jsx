@@ -7,6 +7,9 @@ import {
 import './index.css'
 import Roots from './Roots/Roots';
 import Home from './Home/Home';
+import Bookdetails from './Bookdetails/Bookdetails';
+
+
 
 
 const router = createBrowserRouter([
@@ -16,8 +19,18 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        
+        
+        
+      },
+      {
+        path:'/book/:bookId',
+        element:<Bookdetails></Bookdetails>,
+        loader:()=>fetch('../bookshop.json')
+
       }
+      
     ]
   },
 ]);

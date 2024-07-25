@@ -1,10 +1,16 @@
-import NavBar from "../NavBar/NavBar";
+
+import Books from "../Books/Books";
+import Header from "../Header/Header";
+
 
 
 const Home = () => {
   return (
     <div>
-      <NavBar></NavBar>
+     
+      <Header></Header>
+      <Books></Books>
+      
     </div>
   );
 };
